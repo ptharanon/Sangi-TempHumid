@@ -9,8 +9,7 @@ import paho.mqtt.client as mqtt
 SENSOR_ADDRESS = 33
 LOCATION = "outdoor"
 
-# SERIAL_PORT = '/dev/ttyUSB0'
-SERIAL_PORT = '/dev/tty.usbmodem56D11266251'  # Adjust this to your serial port
+SERIAL_PORT = '/dev/ttyACM0'
 TEMP_ADDRESS = 2
 HUMID_ADDRESS = 6
 
@@ -122,7 +121,7 @@ def main():
 
         else:
             print("Failed to read data.")
-        time.sleep(60)  # Poll every 2 seconds
+        time.sleep(60)  # Poll every 60 seconds
 
 if __name__ == "__main__":
     main()

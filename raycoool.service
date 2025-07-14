@@ -1,0 +1,14 @@
+[Unit]
+Description = Raycoool.service
+After=multi-user.target
+After=network-online.target
+Wants=network-online.target
+
+[service]
+Type=simple
+User=pi
+ExecStart=/home/pi/Desktop/Sangi-TempHumid-main/env/bin/python3 /home/pi/Desktop/Sangi-TempHumid-main/main.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
