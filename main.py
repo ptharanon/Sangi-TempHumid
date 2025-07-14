@@ -7,7 +7,7 @@ import paho.mqtt.client as mqtt
 
 
 SENSOR_ADDRESS = 33
-LOCATION = "outdoor"
+LOCATION = "indoor"
 
 SERIAL_PORT = '/dev/ttyACM0'
 TEMP_ADDRESS = 2
